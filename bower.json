@@ -1,0 +1,29 @@
+{
+  "name": "online-store",
+  "description": "Store for selling music albums, instruments and accessories.",
+  "main": "",
+  "authors": [
+    "Carlos Munoz Kampff"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "2",
+    "music",
+    "store",
+    "instruments",
+    "albums"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
