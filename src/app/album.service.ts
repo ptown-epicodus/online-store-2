@@ -16,11 +16,9 @@ export class AlbumService {
   getAlbums() {
     return this.goods;
   }
-  // goods: Good[] = [new Good("test1","a", "a", "a",1,1)];
-  // constructor() { }
-  //
-  // getAlbums() {
-  //   return this.goods;
-  // }
+
+  getGoodById(goodId: string){
+    return this.angularFire.database.object('goods/' + goodId);
+  }
 
 }

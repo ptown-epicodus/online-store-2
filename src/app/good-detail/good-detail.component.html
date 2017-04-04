@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-6">
+    <img src="{{(goodToDisplay | async)?.videoUrl}}" alt="" />
+  </div>
+  <div class="col-md-6">
+    <div>
+      <h3>{{(goodToDisplay | async)?.title | uppercase}}</h3>
+      <h4>{{(goodToDisplay | async)?.artist | uppercase}}</h4>
+      <p>{{(goodToDisplay | async)?.description}}</p>
+    </div>
+  </div>
+</div>

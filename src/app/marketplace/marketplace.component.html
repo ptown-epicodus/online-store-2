@@ -1,8 +1,9 @@
 <h2>Marketplace</h2>
 
-<div *ngFor="let good of goods | async" class="panel panel-default">
+<div *ngFor="let good of goods | async" (click)="goToDetailPage(good)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{good.title}}</em> by {{good.artist}}</h3>
     <img src={{good.videoUrl}}>
+    <h1>{{good.$key}}</h1>
   </div>
 </div>

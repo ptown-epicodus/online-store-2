@@ -11,6 +11,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { DataServiceService } from './data-service.service';
 import { AlbumService } from './album.service';
+import { GoodDetailComponent } from './good-detail/good-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    MarketplaceComponent
+    MarketplaceComponent,
+    GoodDetailComponent
   ],
   imports: [
     BrowserModule,
