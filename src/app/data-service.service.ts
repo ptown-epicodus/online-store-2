@@ -2,6 +2,15 @@ import { Injectable } from '@angular/core';
 import { Good } from './app.component';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
+/// Deprecated
+
+
+
+
+
+
+
+
 @Injectable()
 export class DataServiceService {
 

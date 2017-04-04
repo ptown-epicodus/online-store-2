@@ -1,9 +1,29 @@
 <h2>Marketplace</h2>
 
-<div *ngFor="let good of goods | async" (click)="goToDetailPage(good)" class="panel panel-default">
-  <div class="panel-body">
-    <h3><em>{{good.title}}</em> by {{good.artist}}</h3>
-    <img src={{good.videoUrl}}>
-    <h1>{{good.$key}}</h1>
+<div class="row">
+  <div class="col-md-8">
+    <div *ngFor="let good of goods | async" (click)="goToDetailPage(good)" class="panel panel-default">
+      <div class="panel-body">
+        <h3><em>{{good.title}}</em> by {{good.artist}} quantity {{good.quantity}}</h3>
+
+      </div>
+    </div>
+  </div>
+  <!-- left co -->
+  <div class="col-md-4 panel panel-default">
+    <div class="panel-body" id="create-item">
+      <h4>Add Product</h4>
+      <label>title</label><br>
+      <input #title><br>
+      <label>artist</label><br>
+      <input #artist><br>
+      <label>description</label><br>
+      <input #description><br>
+      <label>url</label><br>
+      <input #url><br>
+      <label>quantity</label><br>
+      <input #quantity><br>
+      <button (click)="submitForm(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
+    </div>
   </div>
 </div>

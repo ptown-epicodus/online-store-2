@@ -14,14 +14,20 @@ export class MarketplaceComponent implements OnInit {
 
   goods: FirebaseListObservable<any[]>;
 
+
   constructor(public service: AlbumService, private router: Router) { }
 
   ngOnInit() {
-    this.goods = this.service.getAlbums();
+    this.goods = this.service.getGoods();
   }
 
-  goToDetailPage(clickedGood: Good) {
-   this.router.navigate(['goods', clickedGood.id]);
+  goToDetailPage(clickedGood) {
+   this.router.navigate(['goods', clickedGood.$key]);
  };
+
+ submitForm(title: string, artist: string, description: string, url: string, quantity: any){
+   var newGood: Good = new Good(title, artist, description, url, parseInt(quantity));
+   this.service.addGood(newGood);
+ }
 
 }

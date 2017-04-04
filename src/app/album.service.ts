@@ -13,12 +13,16 @@ export class AlbumService {
     console.log(this.goods);
   }
 
-  getAlbums() {
+  getGoods() {
     return this.goods;
   }
 
   getGoodById(goodId: string){
     return this.angularFire.database.object('goods/' + goodId);
+  }
+
+  addGood(newGood: Good) {
+    this.goods.push(newGood);
   }
 
 }
