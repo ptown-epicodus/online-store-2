@@ -8,3 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Star Tunes!';
 }
+
+export class Good {
+
+  constructor(public title: string, public artist: string, public description: string, public videUrl: string, public quantity: number, public id: number) { }
+
+}
