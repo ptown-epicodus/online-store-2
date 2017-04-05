@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6">
-    <img src="{{(goodToDisplay | async)?.videoUrl}}" alt="" />
+    <img [src]="(goodToDisplay | async)?.videoUrl">
   </div>
   <div class="col-md-6">
     <div>
